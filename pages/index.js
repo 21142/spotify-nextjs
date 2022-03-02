@@ -1,19 +1,18 @@
 import Head from "next/head";
 import Image from "next/image";
+import Sidebar from "../components/Sidebar";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="bg-black h-screen overflow-hidden">
       <Head>
-        <title>Create Next App</title>
+        <title>Next Spotify</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <h1>This is a spotify clone</h1>
-
-      <main>
-        {/* Sidebar */}
+      <main className="">
+        <Sidebar />
         {/* Center */}
       </main>
 
