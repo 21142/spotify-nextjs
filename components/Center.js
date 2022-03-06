@@ -45,11 +45,11 @@ function Center() {
   }, [spotifyApi, playlistId]);
 
   return (
-    <div className="flex-grow">
+    <div className="flex-grow h-screen overflow-y-scroll scrollbar-hide">
       <header className="absolute top-5 right-8">
         <div
           className="flex items-center bg-black space-x-2 opacity-90 hover:opacity-75 hover:bg-black cursor-pointer rounded-full p-1 pr-2"
-          onClick={() => signOut({ callbackUrl: "/login" })}
+          onClick={signOut}
         >
           <img
             className="rounded-full w-10 h-10"
