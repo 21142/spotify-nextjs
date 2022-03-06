@@ -1,26 +1,27 @@
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
 import { shuffle } from "lodash";
 import { playlistIdState, playlistState } from "../atoms/playlistAtom";
 import { useRecoilState, useRecoilValue } from "recoil";
 import useSpotify from "../hooks/useSpotify";
+import Songs from "../components/Songs";
 const colors = [
-  "from-blue-800",
-  "from-purple-800",
-  "from-pink-800",
-  "from-indigo-800",
-  "from-green-800",
-  "from-red-800",
-  "from-yellow-800",
-  "from-amber-800",
-  "from-lime-800",
-  "from-emerald-800",
-  "from-teal-800",
-  "from-sky-800",
-  "from-fuchsia-800",
-  "from-rose-800",
-  "from-cyan-800",
+  "from-blue-900",
+  "from-purple-900",
+  "from-pink-900",
+  "from-indigo-900",
+  "from-green-900",
+  "from-red-900",
+  "from-yellow-900",
+  "from-amber-900",
+  "from-lime-900",
+  "from-emerald-900",
+  "from-teal-900",
+  "from-sky-900",
+  "from-fuchsia-900",
+  "from-rose-900",
+  "from-cyan-900",
 ];
 
 function Center() {
@@ -46,7 +47,10 @@ function Center() {
   return (
     <div className="flex-grow">
       <header className="absolute top-5 right-8">
-        <div className="flex items-center bg-black space-x-2 opacity-90 hover:opacity-75 hover:bg-black cursor-pointer rounded-full p-1 pr-2">
+        <div
+          className="flex items-center bg-black space-x-2 opacity-90 hover:opacity-75 hover:bg-black cursor-pointer rounded-full p-1 pr-2"
+          onClick={() => signOut({ callbackUrl: "/login" })}
+        >
           <img
             className="rounded-full w-10 h-10"
             src={session?.user.image}
@@ -68,6 +72,10 @@ function Center() {
           </h1>
         </div>
       </section>
+
+      <div>
+        <Songs />
+      </div>
     </div>
   );
 }
