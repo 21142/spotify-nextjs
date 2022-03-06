@@ -1,4 +1,5 @@
 import useSpotify from "../hooks/useSpotify";
+import { millisecondsAsMinutesAndSeconds } from "../lib/timeFormatter";
 
 function Song({ song, order }) {
   const spotifyApi = useSpotify();
@@ -18,7 +19,7 @@ function Song({ song, order }) {
         <p className="lg:w-72 md:w-40 hidden md:inline">
           {song.track.album.name}
         </p>
-        <p>02:22</p>
+        <p>{millisecondsAsMinutesAndSeconds(song.track.duration_ms)}</p>
       </div>
     </div>
   );
