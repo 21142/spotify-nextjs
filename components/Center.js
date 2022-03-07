@@ -45,10 +45,10 @@ function Center() {
   }, [spotifyApi, playlistId]);
 
   return (
-    <div className="flex-grow h-screen overflow-y-scroll scrollbar-hide">
+    <div className="relative bg-[#121212] flex-grow h-screen overflow-y-scroll scrollbar-hide">
       <header className="absolute top-5 right-8">
         <div
-          className="flex items-center bg-black space-x-2 opacity-90 hover:opacity-75 hover:bg-black cursor-pointer rounded-full p-1 pr-2"
+          className="flex items-center bg-black space-x-2 opacity-90 hover:opacity-80 hover:bg-[#121212] cursor-pointer rounded-full p-1 pr-2"
           onClick={signOut}
         >
           <img
@@ -62,18 +62,22 @@ function Center() {
       </header>
 
       <section
-        className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 p-8 text-white`}
+        className={`flex items-end space-x-7 bg-gradient-to-b to-[#121212] ${color} h-80 p-8 text-white`}
       >
-        <img className="h-44 w-44" src={playlist?.images?.[0]?.url} alt="" />
+        <img
+          className="h-44 w-44 shadow-3xl"
+          src={playlist?.images?.[0]?.url}
+          alt=""
+        />
         <div className="">
           <p>PLAYLIST</p>
-          <h1 className="text-2xl md:text-3xl xl:text-5xl font-bold">
+          <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold">
             {playlist?.name}
           </h1>
         </div>
       </section>
 
-      <div>
+      <div className="bg-[#121212]">
         <Songs />
       </div>
     </div>
