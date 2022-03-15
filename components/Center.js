@@ -1,7 +1,7 @@
 import { signOut, useSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
-import { shuffle } from "lodash";
+import { shuffle, toUpper } from "lodash";
 import { playlistIdState, playlistState } from "../atoms/playlistAtom";
 import { useRecoilState, useRecoilValue } from "recoil";
 import useSpotify from "../hooks/useSpotify";
@@ -60,7 +60,6 @@ function Center() {
           <ChevronDownIcon className="w-6 h-6 text-white" />
         </div>
       </header>
-
       <section
         className={`flex items-end space-x-7 bg-gradient-to-b to-[#121212] ${color} h-80 p-8 text-white`}
       >
@@ -70,16 +69,18 @@ function Center() {
           alt=""
         />
         <div className="">
-          <p>PLAYLIST</p>
+          <p className="md:mb-1 lg:mb-2 text-gray-200">
+            {toUpper(playlist?.type)}
+          </p>
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold">
             {playlist?.name}
           </h1>
         </div>
       </section>
-
-      <div className="bg-[#121212]">
+      <div className={`bg-gradient-to-t ${color} to-[#121212] min-h-screen`}>
         <Songs />
       </div>
+      <div className={`bg-gradient-to-b to-[#121212] ${color} h-40`}></div>
     </div>
   );
 }
