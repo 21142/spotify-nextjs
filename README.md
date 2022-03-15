@@ -1,18 +1,30 @@
 ## App implementing Spotify API
 
 \
+In this build I've used:
+
+- [x] Next.js
+- [x] Recoil
+- [x] Tailwind CSS
+- [x] NextAuth
+
 \
-In this build I used Next.js + Recoil + Tailwind CSS + NextAuth\
-\
+You'll need to have a premium Spotify account to test the app.\
 To run the development server use the following command:
 
 ```bash
+npm install
+# then
 npm run dev
-# or
-yarn dev
 ```
 
 Then open [http://localhost:3000](http://localhost:3000) in your browser\
+\
+Make sure to open spotify on one of your devices, then play&pause a song before trying to play songs through this app\
+\
+You could go to this link [https://open.spotify.com/](https://open.spotify.com/) to open their web player\
+\
+The device which you make active (play&pause a song on) is going to act as a 'speaker' that you can remotely control from this web app\
 \
 Docs used for this build:
 
