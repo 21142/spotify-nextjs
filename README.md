@@ -1,3 +1,6 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/cee0febc3cb1907b24d9/maintainability)](https://codeclimate.com/github/21142/spotify-nextjs/maintainability)
+[![Known Vulnerabilities](https://snyk.io/test/github/21142/spotify-nextjs/badge.svg)](https://snyk.io/test/github/21142/spotify-nextjs)
+
 ## App implementing Spotify API
 
 \
