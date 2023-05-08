@@ -1,9 +1,10 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/cee0febc3cb1907b24d9/maintainability)](https://codeclimate.com/github/21142/spotify-nextjs/maintainability)
 [![Known Vulnerabilities](https://snyk.io/test/github/21142/spotify-nextjs/badge.svg)](https://snyk.io/test/github/21142/spotify-nextjs)
 
-## App implementing Spotify API
+## Music player app implementing Spotify API
 
-\
+![Alt](https://repobeats.axiom.co/api/embed/6a2b7ca5e451f5dccb0b3820de059776d8bfd85c.svg "Repobeats analytics image")
+
 In this build I've used:
 
 - [x] Next.js
